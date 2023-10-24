@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/static/css/style1.css}" rel="stylesheet" />
+<!--    <link th:href="@{/css/style1.css}" rel="stylesheet" />-->
+    <title>Order List</title>
+</head>
+<body>
+<div class="container">
+    <h1>Order List</h1>
+    <!-- Add Order Button -->
+    <a th:href="@{/order/register}" class="add-button">Add Order</a>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Order Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate through the list of orders using Thymeleaf -->
+        <tr th:each="order : ${listOrder}">
+            <td th:text="${order.id}"></td>
+            <td th:text="${order.name}"></td>
+            <td th:text="${order.phone}"></td>
+            <td th:text="${order.address}"></td>
+            <td th:text="${order.orderName}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>
