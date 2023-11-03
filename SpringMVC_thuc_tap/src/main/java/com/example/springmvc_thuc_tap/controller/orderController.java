@@ -60,10 +60,21 @@ public class orderController {
 
     @PostMapping("/upload")
     public String uploadFile(@RequestParam("file") MultipartFile file,
-                             @RequestParam("status") String status) throws Exception {
+                             @RequestParam("status") String status,
+                             Model model) throws Exception {
 //        Path uploadPath = Paths.get(uploadDirectory.getURI());
         // Get the original filename
+
         String originalFilename = file.getOriginalFilename();
+
+        if (originalFilename == null ||
+                !(originalFilename.endsWith(".jpg") ||
+                        originalFilename.endsWith(".jpeg") ||
+                        originalFilename.endsWith(".png") ||
+                        originalFilename.endsWith(".txt"))) {
+            model.addAttribute("message", "File khong hop le");
+            return "upload_file";
+        }
 
         String projectDir = System.getProperty("user.dir");
         // Define the upload directory

@@ -1,1 +1,1 @@
-hello
+day la file hello.txt trong static/uploads
