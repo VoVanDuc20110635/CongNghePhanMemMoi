@@ -1,0 +1,48 @@
+/* Định dạng trang chính */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng hộp chứa form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng input file */
+.class-input {
+    display: block;
+    width: 100%;
+    margin: 10px -10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Định dạng các checkbox */
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Định dạng nút Upload File */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Định dạng nút Upload File khi hover */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

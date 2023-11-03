@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+    <link th:href="@{/static/css/uploadfile.css}" rel="stylesheet" />
+</head>
+<body>
+<form action="/order/upload" method="post" enctype="multipart/form-data">
+    <input class="class-input" type="file" name="file" id="file" accept=".jpg, .jpeg, .png, .txt" style="margin: 10px -10px;">
+    <div>
+        <label>
+            <input type="checkbox" name="status" value="public"> Public
+        </label>
+        <label>
+            <input type="checkbox" name="status" value="private"> Private
+        </label>
+    </div>
+    <input type="submit" value="Upload File">
+</form>
+</body>
+</html>
